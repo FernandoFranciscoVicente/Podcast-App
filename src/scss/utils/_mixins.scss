@@ -1,0 +1,28 @@
+@use '../custom' as *;
+
+//Creamos el mixins para la imagen del header
+@mixin bgImage ( $url, $color ){
+    background-image: linear-gradient( transparentize( $color, .3%)
+    0%, transparentize($color, .3%)100%), url($url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+@mixin headingBorder($colorTexto, $colorLinea){
+    color: $colorTexto;
+    dislpay: inline-block;
+    margin-top: 5rem;
+    @include media-breakpoint-up(md){
+        margin-top:0;
+    }
+
+    &::after{
+        content: '';
+        height: 1rem;
+        width: 100%;
+        background-color: $colorLinea;
+        display: block;
+        margin: -1.4rem 0 0 0;
+    }
+}

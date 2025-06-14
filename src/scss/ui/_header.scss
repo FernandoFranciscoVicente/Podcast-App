@@ -1,0 +1,40 @@
+@use '../custom' as *;
+@use '../utils/mixins';
+
+.site-header{
+    @include mixins.bgImage('../../src/img/header.jpg', $secondary);
+
+    .logo{
+        max-width: 20rem;
+        margin: 0 auto;
+        @include media-breakpoint-up(md){
+            margin: 0;
+        }
+    }
+
+    .contenido{
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        @include media-breakpoint-up(md){
+            max-width: 50%;
+        }
+        //Mediaqueries de bootstrap
+        @include media-breakpoint-up(lg){
+            padding-top: 15rem;
+            padding-bottom: 15rem;
+        }
+        h1{
+            font-size: 4.5rem;
+            color: rgb(240, 238, 247);
+            @include media-breakpoint-up(md){
+                font-size: 6rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+

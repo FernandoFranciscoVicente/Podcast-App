@@ -1,0 +1,8 @@
+//Hacemos uso de @use para importar y usar módulos de SASS
+//Importamos la carpeta utilis para que se comunique con el css de build
+@use 'utils';
+
+//Importamos 'components'
+@use 'components';
+//En este caso la carpeta 'ui'
+@use 'ui';
