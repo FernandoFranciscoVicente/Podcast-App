@@ -1,0 +1,17 @@
+@use '../custom' as *;
+
+
+.footer{
+    background-color: $secondary;
+    color: $white;
+    text-align: center;
+    @include media-breakpoint-up(md){
+        text-align: left;
+    }
+
+    //Una vez que se compile será enviado a la clase footer__container
+    &__container{
+        @include make-container();
+        max-width: map-get($map: $container-max-widths, $key: xxl );
+    }
+}
