@@ -9,9 +9,16 @@
     background-position: top center;
 }
 
+@mixin bgIcono($url){
+    background-image: url($url);
+    background-size: 10rem;
+    background-position: 50% 2rem;
+    background-repeat: no-repeat;
+}
+
 @mixin headingBorder($colorTexto, $colorLinea){
     color: $colorTexto;
-    dislpay: inline-block;
+    display: inline-block;
     margin-top: 5rem;
     @include media-breakpoint-up(md){
         margin-top:0;

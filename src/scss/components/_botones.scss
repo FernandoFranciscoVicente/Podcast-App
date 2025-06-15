@@ -1,19 +1,33 @@
 //Importamos la hoja de estilos de bootstrap desdel el archivo custom
 @use '../custom' as *;
 
-.btn-header{
+.btn-header {
     //BG, Border, Color de texto, HOVER: BG, Border, Color de texto
     @include button-variant($primary, transparent, $secondary, 
     darken($primary, 10%), transparent, darken($secondary, 10%) );
     @include button-size( 1rem, 5rem, 2rem, 0);
+    background-color: $primary;
+    color: $secondary;
     font-weight: 700;
     text-decoration: none;
     text-align: center;
     display: block;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    border-style: solid;
 
     @include media-breakpoint-up(md){
         display: inline-block;
+    }
+}
+
+.boton-plan {
+    //Hereda las reglas de una clase
+    @extend .btn-header;
+    color: $secondary;
+    border: 2px solid $white;
+
+    @include media-breakpoint-up(md){
+        display: block;
     }
 }
 

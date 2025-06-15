@@ -1,0 +1,30 @@
+@use '../custom' as *;
+@use 'utils/mixins';
+
+.heading-testimonial{
+    @include mixins.headingBorder($secondary, $primary);
+}
+
+.testimonial {
+    //tamaño, tipo de relleno, color del borde
+    border: .5rem solid $secondary;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    //arriba, abajo, derecho, izquierdo
+    padding: 2rem 2rem 2rem 6rem;
+    position: relative;
+
+    //Se coloca el before para que el contenido aparezca al principio
+    //del contenedor
+    &::before{
+        content: '';
+        width: 5rem;
+        height: 5rem;
+        display: block;
+        background-image: url(../img/comilla.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: absolute;
+        left: .5rem;
+    }
+}

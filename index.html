@@ -64,6 +64,92 @@
         </p>
         <img class="img-fluid" src="build/img/grafica.svg" alt="imagen gráfica detallada">
     </section>
+    
+    <section class="planes bg-secondary py-4">
+        <div>
+            <h2>Planes</h2>
+            <!--Row dentro de otro row sí es posible-->
+            <p class="text-white">Inicia Gatis, crece tu plan cuando sea necesario</p>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-10">
+                    <div class="row nuestros-planes">
+                        <!--Cambiaer el orden sin modificar el html cuando el elemento padre
+                        tiene display flex (row)-->
+                        <div class="col-md-4 order-2 bg-white plan inicio">
+                            <h3 class="text-center">Inicio</h3>
+                            <p class="text-center precio">$2.99 Mes</p>
+                            <ul class="list-unstyled">
+                                <li class="text-center mb-2">30 Episodios</li>
+                                <li class="text-center mb-2">Estadísticos</li>
+                                <li class="text-center mb-2">App para grabar</li>
+                            </ul>
+                            <a class="boton-plan" href="#">Inscribirme</a>
+                        </div>
+                        <div class="col-md-4 order-1 bg-primary order-md-2 plan negocio">
+                            <h3 class="text-center"> Negocio</h3>
+                           <p class="text-center precio">$6.99 Mes</p>
+                            <ul class="list-unstyled">
+                                <li class="text-center mb-2">Episodios ilimitados</li>
+                                <li class="text-center mb-2">Todas las plataformas</li>
+                                <li class="text-center mb-2">Estadísticas</li>
+                                <li class="text-center mb-2">App para grabars</li>
+                                <li class="text-center mb-2">Podcast pagados</li>
+                            </ul>
+                            <a class="boton-plan" href="#">Inscribirme</a>
+                        </div>
+                        <div class="col-md-4 order-3 bg-white plan pro">
+                            <h3 class="text-center">PRO</h3>
+                           <p class="text-center precio">$4.99 Mes</p>
+                            <ul class="list-unstyled">
+                                <li class="text-center mb-2">50 Episodios</li>
+                                <li class="text-center mb-2">Todas las plataformas</li>
+                                <li class="text-center mb-2">Estadísticas</li>
+                                <li class="text-center mb-2">App para grabars</li>
+                            </ul>
+                            <a class="boton-plan" href="#">Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-xl py-4 testimoniales">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img class="img-fluid w-75 d-block mx-auto" src="/src/img/app.jpg" alt="imagen app">
+            </div>
+            <div class="col-md-8">
+                <h2 class="heading-testimonial">Testimoniales</h2>
+
+                <div class="row mt-3">
+                    <!--Al no ser posible alinearlo, se coloca el offset de 2 para dejar 
+                    una columna vacía de tamaño 2/12-->
+                    <div class="col-md-6 offset-md-2 mb-2">
+                        <div class="testimonial bg-primary">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Odio nemo laboriosam accusamus molestias velit ab quia 
+                            dolores illo? Aut nam quibusdam, harum commodi eveniet 
+                        </div>
+                    </div>  <!--Testimonial 1-->
+                    <div class="col-md-6 offset-md-4 mb-2">
+                        <div class="testimonial bg-primary">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Odio nemo laboriosam accusamus molestias velit ab quia 
+                            dolores illo? Aut nam quibusdam, harum commodi eveniet 
+                        </div>
+                    </div> <!--Testimonial 2-->
+                    <div class="col-md-6 offset-md-6 mb-2">
+                        <div class="testimonial bg-primary">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Odio nemo laboriosam accusamus molestias velit ab quia 
+                            dolores illo? Aut nam quibusdam, harum commodi eveniet 
+                        </div>
+                    </div> <!--Testimonial 3-->
+                </div>
+            </div>
+        </div>
+    </section>c
 
 </body>
 </html>

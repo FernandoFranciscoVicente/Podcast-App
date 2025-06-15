@@ -1,0 +1,57 @@
+@use '../custom' as *;
+@use 'utils/mixins';
+
+//Definimos la variable (disponible solo en este archivo)
+$separacion: 5rem;
+
+.planes{
+    h2{
+        @include mixins.headingBorder($white, $primary);
+    }
+}
+
+.plan{
+    padding: 16rem 4rem 4rem 4rem;
+    border-bottom: 1px solid #e1e1e1;
+
+    @include media-breakpoint-up(md){
+        border: none;
+        @include transition(transform 300ms ease);
+        &:hover{
+            transform: scale(1.1)
+        }
+    }
+
+    .precio{
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &.inicio{
+        //Se colocan las comillas cada vez que el parámetro sea una imagen
+        @include mixins.bgIcono('../img/icono_inicio.svg');
+    }
+    
+    //'&' Para que la clase 'plan' y la clase 'negocio' estén JUNTAS EN EL MISMO ELEMENTO
+    &.negocio{
+        @include mixins.bgIcono('../img/icono_negocio.svg');
+        @include media-breakpoint-up(md){
+            //Los márgenes negativos hacen que el elemento se "estire" hacia la dirección contraria
+            margin-top: -$separacion;
+            margin-bottom: -$separacion;
+            border-radius: 2rem;
+            //Agregamos produndidad para evitar que los elementos tomen
+            //mayor tamaño
+            z-index: 100;
+            padding-top: calc(16rem  + #{$separacion});
+            background-position: 50% calc(2rem + #{$separacion});
+        }
+    }
+
+    &.pro{
+        @include mixins.bgIcono('../img/icono_pro.svg');
+
+
+    }
+}

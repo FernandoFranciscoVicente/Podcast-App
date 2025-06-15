@@ -5,15 +5,18 @@
     h2{
         @include mixins.headingBorder($secondary, $white)
     }
-    .imagen{
-        //Importamos el mixin de bootstrap referente a la transition
-        //tipoDeTransform, duración en ms, tipo de animación
-        @include transition( transform 300ms ease);
-        //Aplicamos una rotación de 8 grados cuando coloquemos el cursos encima
-        &:hover{
-            //Scale mayor a 1 incrementa el tamaño, menor a 1 disminuye
-            transform: rotate(8deg) scale(1.1);
+    .imagen {
+        @include media-breakpoint-up(md) {
+            //Importamos el mixin de bootstrap referente a la transition
+            //tipoDeTransform, duración en ms, tipo de animación
+            @include transition( transform 300ms ease);
+            //Aplicamos una rotación de 8 grados cuando coloquemos el cursos encima
+            &:hover {
+                //Scale mayor a 1 incrementa el tamaño, menor a 1 disminuye
+                transform: rotate(8deg) scale(1.1);
+            }
         }
+
     }
 }
 
